@@ -1,5 +1,10 @@
 package com.theironyard;
 
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.Date;
+import java.util.Random;
+
 /**
  * This is another kata exercise. Follow the instructions below and implement
  * the methods as described.
@@ -18,6 +23,17 @@ public class ArrayKatas {
      * @return an array of five random ints
      */
     // todo: create fiveRandomInts() static method
+    public static int[] fiveRandomInts(){
+        Random rand = new Random();
+        int num1 = rand.nextInt();
+        int num2 = rand.nextInt();
+        int num3 = rand.nextInt();
+        int num4 = rand.nextInt();
+        int num5 = rand.nextInt();
+        int[] random5 = new int[]{num1, num2, num3, num4, num5 };
+        return random5;
+
+    }
 
     /**
      * Create a static method named threeArbitraryDates() that returns an array
@@ -27,6 +43,10 @@ public class ArrayKatas {
      * @return an array of three LocalDate objects
      */
     // todo: create threeArbitraryDates() method
+    public static LocalDate[] threeArbitraryDates(){
+        LocalDate[] date = new LocalDate[3];
+        return date;
+    }
 
     /**
      * Create a static method named nullsToArbitraryStrings() that accepts an
@@ -51,6 +71,15 @@ public class ArrayKatas {
      * @return an array of five string where null values have been replaced with arbitrary strings
      */
     // todo: create nullsToArbitraryStrings() method
+    public static String[] nullsToArbitraryStrings(String [] source){
+        for (int x = 0; x <= 4; x++) {
+            if (source[x] == null) {
+                source[x] = "blue";
+            }
+        }
+        return source;
+
+    }
 
     /**
      * Create a static method named arrayIndexes() that accepts a single integer
@@ -64,5 +93,12 @@ public class ArrayKatas {
      * @return An array of ints, starting at 0 and continuing to n-1
      */
     // todo: create arrayIndexes() method
+    public static int[] arrayIndexes( int n ){
+        int[] array = new int[n];
+        for (int x = 0; x < n; x++){
+            array[x] += x;
+        }
+        return array;
 
+    }
 }
